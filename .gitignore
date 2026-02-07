@@ -1,0 +1,14 @@
+.gradle/
+build/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+.settings/
+.project
+.classpath
+bin/
+out/
+*.iml
+.idea/

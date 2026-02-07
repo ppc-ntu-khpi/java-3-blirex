@@ -1,18 +1,31 @@
 plugins {
-	id 'java'
+        id 'java'
+        id 'application'
 }
 
 repositories {
-	mavenCentral()
+        mavenCentral()
+}
+
+sourceSets {
+        main {
+                java {
+                        srcDirs = ['src']
+                }
+        }
+}
+
+application {
+        mainClass = 'test.TestResult'
 }
 
 dependencies {
-	testImplementation('org.junit.jupiter:junit-jupiter:5.6.0')
+        testImplementation('org.junit.jupiter:junit-jupiter:5.6.0')
 }
 
 test {
-	useJUnitPlatform()
-	testLogging {
-		events "passed", "skipped", "failed"
-	}
+        useJUnitPlatform()
+        testLogging {
+                events "passed", "skipped", "failed"
+        }
 }
